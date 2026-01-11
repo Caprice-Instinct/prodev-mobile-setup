@@ -1,50 +1,52 @@
-# Welcome to your Expo app 👋
+# First Mobile App - prodev-mobile-app-0x00
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Project Setup Steps
 
-## Get started
+### 1. Project Initialization
+```bash
+cd prodev-mobile-setup
+mkdir prodev-mobile-app-0x00
+cd prodev-mobile-app-0x00
+npx create-expo-app@latest .
+```
 
-1. Install dependencies
+### 2. Home Screen Modification
+- Opened `app/(tabs)/index.tsx`
+- Located the default text "Welcome!"
+- Changed it to "** First App Created**"
 
-   ```bash
-   npm install
-   ```
+### 3. Application Testing
+```bash
+npx expo start
+```
+- For iOS: Scan QR code with Camera app
+- For Android: Scan QR code with Expo Go app
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+### 4. Project Reset
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Observations from reset-project Command
 
-## Learn more
+When running `npm run reset-project`, the following changes occurred:
 
-To learn more about developing your project with Expo, look at the following resources:
+1. **Original app directory moved**: The existing `app/` directory with all its complex structure (tabs, components, etc.) was moved to `app-example/`
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+2. **New simplified app directory created**: A fresh, minimal `app/` directory was created with:
+   - `_layout.tsx` - Root layout file
+   - `index.tsx` - Simple entry screen with basic React Native components
 
-## Join the community
+3. **File structure transformation**:
+   - **Before reset**: Complex tab-based navigation with multiple screens, themed components, and advanced features
+   - **After reset**: Clean slate with minimal boilerplate code
 
-Join our community of developers creating universal apps.
+4. **Preserved files**: All original complex code is preserved in `app-example/` for reference
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+5. **Benefits of reset**:
+   - Provides a clean starting point for development
+   - Removes template complexity
+   - Keeps original template as reference in `app-example/`
+   - Maintains all project configuration and dependencies
+
+The reset command essentially gives you a fresh start while preserving the original template structure for learning and reference purposes.
